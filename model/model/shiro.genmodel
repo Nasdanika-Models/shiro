@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.nasdanika.models.shiro/src/main/java" creationIcons="false"
+    editorDirectory="" modelPluginID="org.nasdanika.models.shiro" modelName="Shiro"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    featureDelegation="Dynamic" complianceLevel="17.0" suppressGenModelAnnotations="false"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>shiro.ecore</foreignModel>
+  <genPackages prefix="Shiro" basePackage="org.nasdanika.models" disposableProviderFactory="true"
+      ecorePackage="shiro.ecore#/">
+    <genClasses ecoreClass="shiro.ecore#//SecurityManager">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shiro.ecore#//SecurityManager/realms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shiro.ecore#//SecurityManager/roles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shiro.ecore#//SecurityManager/permissions"/>
+    </genClasses>
+    <genClasses ecoreClass="shiro.ecore#//Subject">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Subject/host"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Subject/authenticated"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shiro.ecore#//Subject/principals"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference shiro.ecore#//Subject/session"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shiro.ecore#//Subject/roles"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shiro.ecore#//Subject/permissions"/>
+    </genClasses>
+    <genClasses ecoreClass="shiro.ecore#//Principal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Principal/realmName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Principal/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Principal/type"/>
+    </genClasses>
+    <genClasses ecoreClass="shiro.ecore#//Role">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Role/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Role/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference shiro.ecore#//Role/permissions"/>
+    </genClasses>
+    <genClasses ecoreClass="shiro.ecore#//Permission">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Permission/wildcardString"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Permission/description"/>
+    </genClasses>
+    <genClasses ecoreClass="shiro.ecore#//Realm">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Realm/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Realm/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Realm/cachingEnabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Realm/authenticationCachingEnabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Realm/authorizationCachingEnabled"/>
+    </genClasses>
+    <genClasses ecoreClass="shiro.ecore#//Session">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Session/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Session/host"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Session/startTimestamp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Session/lastAccessTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute shiro.ecore#//Session/timeout"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
