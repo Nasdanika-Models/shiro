@@ -41,7 +41,6 @@ jobs:
         run: |
           chmod u+x nsd
           ./nsd model ../model/model/shiro.ecore ecore doc --doc-dir=../doc save ../shiro.xmi
-          ls ../docs
       - name: Generate site
         working-directory: nsd-cli
         run: |
